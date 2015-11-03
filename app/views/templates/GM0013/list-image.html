@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html manifest="huancun.manifest">
+<head>
+<!-- 实时预览调试代码，模板开发完成后删除 -->
+		
+		<!-- 调试代码 End -->
+		<script type="text/javascript">
+		// 跳转PC页面
+		{if $site_another_url}
+			if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+				location.href = '{$site_another_url}';
+			}
+		{/if}
+		</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no, email=no" name="format-detection">
+<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+<meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+<script type="text/javascript">
+	window.addEventListener('load', function(){
+   setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+});//safari浏览器可以通过此代码来隐藏地址栏
+</script>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+<title>{$title}</title>
+<link rel="stylesheet" href="{$site_url}css/reset.css" /> 
+<link rel="stylesheet" href="{$site_url}css/public.css" /> 
+<link href="{$site_url}css/css.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+<link href="{$site_url}css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<link href="{$site_url}css/swipe.css" rel="stylesheet" type="text/css" />
+<script src="{$site_url}js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="{$site_url}js/jquery.min.js"></script>
+<script type="text/javascript" src="{$site_url}js/function.js"></script>
+<script type="text/javascript" src="{$site_url}js/lanrenzhijia.js"></script>
+<script src="{$site_url}js/idangerous.swiper-2.0.min.js"></script>
+<script src="{$site_url}js/simple-app.js"></script>
+</head>
+<body>
+<div class="body">
+	{include file='./_dh.html'}
+<div class="wrap page-active">
+	{include file='./_zdcustom.html'}
+<h1 class="fixed-top"><span class="fixed-btn backa"><a href="javascript:window.history.back()">〈返回</a></span> <div class="menu2" id="header_menu"><span></span>></div> {$list.name}</h1>
+<div class="index-wrap">
+   <section>  
+      <div class="index_show" style="margin:45px 0px 0px;">    
+   	 <div class="boxmain_d">
+     	<div class="d_contbgs">
+        	<div class="d_bgtop"></div>
+            <div class="box-bg">
+        	<div class="box-title"><span class="more3" id="first">分类<span id="down"> &or;</span><span id="up"> &and;  </span></span><div class="titleb">{$list.name}</div></div>
+             {include file='./_nav.html'}   
+<div class="box-m">
+<div class="pros_showa">
+  <ul>
+					{foreach name=article item=article from=$list.data}
+                    <li><a href="{$article.link}">
+                        <div><p><img  src="{$article.image}" width="103px" height="117px"></p><span class="imgword">{$article.title}</span></div>
+                        </a>
+                    </li>
+                    {/foreach}
+                 </ul>   
+  <div class="next1"><a href="{$page_links.first_link}">首页</a><a href="{$page_links.prev_link}">上一页</a>{$page_links.current_page}/{$page_links.page_count}　<a href="{$page_links.next_link}">下一页</a><a href="{$page_links.last_link}">尾页</a></div>          
+                </div>                
+                  
+                    
+                </div>
+          </div>          
+          </div>
+        </div>
+     </div> 
+	 {$footprint}
+   </section>
+</div>
+	{$footscript}
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "images/baner.jpg",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "images/baner.jpg",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 640,
+			"height": 360
+		}
+	},
+	"bottom_navs": {
+		"value": [{
+			"name": "电话",
+			"icon": "&#xe602;",
+			"image": "icon/f_i3.png",
+			"data": "0592-2323232",
+			"type": "tel",
+			"enable": 1
+		}, {
+			"name": "短信",
+			"icon": "&#xe604;",
+			"image": "icon/f_i4.png",
+			"data": "13489990000",
+			"type": "sms",
+			"enable": 1
+		}, {
+			"name": "咨询",
+			"icon": "&#xe606;",
+			"image": "icon/f_i5.png",
+			"data": "0000001@53kf",
+			"type": "im",
+			"enable": 1
+		}],
+		"description": "自定义底部导航",
+		"type": "quickbar"
+	}
+}

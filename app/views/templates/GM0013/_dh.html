@@ -1,0 +1,63 @@
+﻿    <div class="class page-prev">
+      <h1 class="class-top">
+        <span class="class-close">×</span>
+        快捷导航
+      </h1>
+      <div class="class-m">
+        <div class="swiper-container scroll-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <ul class="class-list">
+                <li>
+                  <a href="{$site_url}">首页</a>
+                </li>
+               {foreach item=left_navs from=$navs}
+                <li class="menu_head">
+                  {if $left_navs.childmenu}
+                  <dl class="icon">
+                    <span class="icon1">-</span>
+                    <span class="icon2">+</span>
+                  </dl>
+                  {/if}
+                  <a href="{$left_navs.link}">{$left_navs.name}</a>
+                </li>
+                {if $left_navs.childmenu}
+                <li class="menu_body">
+                  {foreach item=left_child from=$left_navs.childmenu}
+                  <dl>
+                    <a href="{$left_child.link}">
+                      <span class="icon_body"></span>
+                      {$left_child.name}
+                    </a>
+                  </dl>
+                  {if $left_child.childmenu}
+                  {foreach item=left_grandson from=$left_child.childmenu}
+                  <dl>
+                    <a href="{$left_grandson.link}">
+                      <span class="icon_body"></span>
+                      &nbsp;&nbsp;&nbsp;{$left_grandson.name}
+                    </a>
+                  </dl>
+                  {if $left_grandson.childmenu}
+                  {foreach item=left_grandson_next from=$left_grandson.childmenu}
+                  <dl>
+                    <a href="{$left_grandson_next.link}">
+                      <span class="icon_body"></span>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$left_grandson_next.name}
+                    </a>
+                  </dl>
+                  {/foreach}
+                {/if}
+                  {/foreach}
+                  {/if}
+                  {/foreach}
+                </li>
+                {/if}
+                {/foreach}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	

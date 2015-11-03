@@ -1,0 +1,22 @@
+<div class="headers">
+    <span><a href="#">设为首页</a> | <a href="#">加入收藏</a> </span>
+</div>
+<div class="menu">
+    <ul class="nav">  
+        <li><a href="index.html" >首 &nbsp; 页</a></li>
+        {foreach name=navs item=nav from=$navs}
+		<li class="nLi{if $nav.current} on{/if}">
+		    <h3><a href="{$nav.link}">{$nav.name}</a></h3>
+			{if $nav.children}
+			<ul class="sub">
+			{foreach key=key item=nav_list from=$nav.children}
+			<li class="{if $nav_list.current}on{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+			{/foreach}  
+			</ul>
+			{/if}
+		</li>
+		{/foreach}                                                                   
+    </ul>
+</div> 
+<div class="banners"><img src="{$global.slidepics[0].image}" height="309" width="996" /></div> 
+            

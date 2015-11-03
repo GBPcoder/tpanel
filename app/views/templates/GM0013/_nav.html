@@ -1,0 +1,31 @@
+﻿                      
+
+				<div class="hide-class">
+              
+			  {foreach name=pagenavs item=nav from=$pagenavs}
+			<dl><a href="{$nav.link}"><span class="icon">&bull;</span>{$nav.name}</a></dl>
+			{if $nav.childmenu}
+	
+			{foreach key=key item=nav_list from=$nav.childmenu}
+        
+          <dl><a href="{$nav_list.link}"><span class="icon">&bull;</span>->{$nav_list.name}</a></dl>
+          {if $nav_list.childmenu}
+          
+            {foreach key=key item=nav_listsec from=$nav_list.childmenu}
+           
+             <dl><a href="{$nav_listsec.link}"><span class="icon">&bull;</span>-->{$nav_listsec.name}</a></dl>
+           
+            {/foreach}
+          
+          {/if}
+        
+        {/foreach}
+     
+      {/if}
+  
+    {/foreach}
+              </div>
+            </div>
+			
+			
+			

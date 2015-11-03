@@ -1,0 +1,16 @@
+
+.PathInner {position: absolute;width:54px;height:54px;z-index:99999; bottom:10px; left:10px;background:rgba(0,0,0,0.1); border-radius:7px; }
+
+.PathInner .PathMain{z-index:1000;position:absolute;display:block;bottom:0;left:0;border-radius:100%;width:36px;height:36px; top:50%; left:50%; transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%);}
+.PathInner .PathMain:before,.PathInner .PathMain:after{ content:""; width:40px; height:40px; position:absolute; top:50%; left:50%;transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%);background:rgba(0,0,0,0.1); border-radius:100%; z-index:5}
+.PathInner .PathMain:after{ width:44px; height:44px; z-index:4}
+.PathMain .pathbox2{ width:100%; height:100%; position:absolute; top:0px; left:0px; border-radius:100%; z-index:1; text-align:center;background:rgba(255,255,255,1.0); color:#fff; -webkit-transition:all 0.3s linear; z-index:7}
+
+.PathInner .item{width:100%;height:100%;background-position:center;background-repeat:no-repeat;display:block;overflow:hidden;text-align:center;vertical-align:middle;position:absolute;}
+.PathInner .PathItem {position:absolute;left:5px;bottom:5px;background:rgba(0,0,0,0.1); width:44px; height:44px; border-radius:100%;}
+.PathInner .PathItem:before{ content:""; width:40px; height:40px; border-radius:100%; position:absolute; top:50%; left:50%;  transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%);background:rgba(0,0,0,0.1); z-index:7}
+.PathInner .PathItem .item{ width:36px; height:36px; background:rgba(255,255,255,1.0); border-radius:36px; position:absolute; top:50%; left:50%;transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); display:block; z-index:8}
+.PathInner .PathItem .item img{ height:20px; text-align:center; overflow:hidden;}
+.PathInner .PathItem .item .title{ height:16px; overflow:hidden; line-height:9px; text-align:center; color:#111111; font-size:0.6em;}
+
+

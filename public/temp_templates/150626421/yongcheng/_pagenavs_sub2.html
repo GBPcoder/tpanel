@@ -1,0 +1,13 @@
+<!-- 二级栏目列表（仅展示到二级子栏目） -->
+{if $pagenavs}
+<nav>
+	<h3>{$posnavs[0].name}</h3>	<!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
+	<ul class="clearfix">
+		{foreach name=pagenavs item=nav from=$pagenavs}
+		<li class="{if $nav.current}current{/if}">
+			<a href="{$nav.link}">{$nav.name}</a>
+		</li>
+		{/foreach}
+	</ul>
+</nav>
+{/if}

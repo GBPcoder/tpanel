@@ -1,0 +1,69 @@
+{
+    "about_us": {
+		"description": "关于我们",
+		"value": {},
+		"description": "第一个栏目列表",
+		"type": "page"
+	},
+	"contact_image": {
+		"value": {
+			"title": "联系我们",
+			"image": "images/rimg_03.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "联系我们图片",
+		"type": "image",
+		"config": {
+			"width": 950,
+			"height": 500,
+			"limit": 4
+		}
+	},
+	"serv_image": {
+		"value": {
+			"title": "服务项目",
+			"image": "images/rimg_06.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "服务项目图片",
+		"type": "image",
+		"config": {
+			"width": 950,
+			"height": 500,
+			"limit": 4
+		}
+	},
+    "case_image": {
+		"value": {
+			"title": "案例展示",
+			"image": "images/rimg_09.jpg",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "案例展示图片",
+		"type": "image",
+		"config": {
+			"width": 950,
+			"height": 500,
+			"limit": 4
+		}
+	},
+    "list1": {
+		"value": {
+			"id": 2, 
+			"total": 4,
+			"star_only": 0
+		},
+		"description": "第一个栏目列表",
+		"type": "list"
+	},
+    "list2": {
+		"value": {},
+		"description": "第一个图文列表",
+		"type": "list"
+	},
+    "list3": {
+		"value": {},
+		"description": "首页左侧栏目导航列表",
+		"type": "list"
+	}
+}

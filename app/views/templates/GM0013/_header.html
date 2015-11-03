@@ -1,0 +1,23 @@
+
+	
+	<header>
+    	<div class="header">
+        	<div class="logo"><img src="{$logo}" width="100%"></div>
+            <div class="menu2" id="quickbar-showcats"><a href="#"><span></span></a></div>
+        </div> 
+<div class="menu">
+            	<div class="nav">
+            	<a class="arrow-left" href="#">&lt;</a> 
+   				 <a class="arrow-right" href="#">&gt;</a>
+				
+               <div class="swiper-nav swiper-container">
+                  <div class="swiper-wrapper"> 
+				   {foreach item=nav from=$navs}
+                      <div class="swiper-slide"><span><a href="{$nav.link}">{$nav.name}</a></span></div>
+                      {/foreach}     
+                  </div>
+				</div>
+                </div>
+    </div>          
+       
+    </header>

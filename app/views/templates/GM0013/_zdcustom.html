@@ -1,0 +1,22 @@
+﻿      <div class="opacity2"></div>
+      <div class="PathInner" id="PathMenu">
+        <div class="PathMain" onclick="PathRun();">
+          <span class="pathbox2">
+            <img src="{$site_url}icon/G.png" width="33" height="33"></span>
+        </div>
+        {foreach item=bottom from=$global.bottom_navs}
+        <div class="PathItem">
+          <span class="item">
+          <div class="icon">{$bottom.icon}</div>
+            <dt class="title">{$bottom.name}</dt>
+          </span>
+        </div>
+        {if $bottom@index eq 2}{break}{/if}
+        {/foreach}
+        <div class="PathItem" onclick="javascript:window.location.href='{$site_url}'">
+          <dl class="item">
+            <img src="{$site_url}icon/f_i2.png" height="20">
+            <dt class="title">首页</dt>
+          </dl>
+        </div>
+      </div>
